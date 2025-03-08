@@ -2,9 +2,10 @@
 
 set -euo pipefail
 
-# Load the environment variables
-ENV_FILE="/Users/orivera/Desktop/Desktop/ENSIGN/4th Semester/CS 460 Advanced Software Engineering/Week 1/rivera-hotel/EnvVariables.env"
+# Load the environment variables using a relative path to EnvVariables.env
+ENV_FILE="$(dirname "$0")/../../EnvVariables.env"
 
+# if the file exists, load the environment variables
 if [ -f "$ENV_FILE" ]; then
     # shellcheck disable=SC2046
     export $(grep -v '^#' "$ENV_FILE" | xargs)
