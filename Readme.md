@@ -45,6 +45,11 @@ To run this project, you will need:
     mvn spring-boot:run
     ```
 
+5. **Open the front end in your browser locally at port 8080**:
+    ```shell
+    http://localhost:8080/rooms
+    ```
+
 ## Project Structure
 
 - `src/main/java`: Contains the Java source code.
