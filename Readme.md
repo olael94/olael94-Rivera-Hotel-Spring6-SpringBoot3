@@ -31,6 +31,16 @@ To run this project, you will need:
     ```shell
     ./bin/postgresql/start_postgres.sh
     ```
+   Inside the folder postgresql/ Access the PSQL terminal by running:
+    ```shell
+    docker exec -it pg-docker /bin/bash
+    ```
+   open PSQL terminal by running:
+    ```shell
+    psql -d local postgres
+    ```
+   Now copy and paste squema.sql and data.sql content into the PSQL terminal to create the database schema and insert initial data.
+
 
 3. **Set up environment variables**:
    Use the username, password, and port info (the one used in the docker script line you have just used to create your docker database) to create a file named `EnvVariables.env` in the root directory with the following content:
